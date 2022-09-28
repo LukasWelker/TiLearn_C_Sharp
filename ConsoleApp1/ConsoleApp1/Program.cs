@@ -146,8 +146,25 @@ namespace ConsoleApp1
 
             // Console.WriteLine(s.StuName);
             //}
-            string[] arr7 = { "aaa.frx", "bbb.TXT", "xyz.dbf", "abc.pdf", "aaaa.PDF", "xyz.frt", "abc.xml", "ccc.txt", "zzz.txt" };
-            var Elements = arr7[1].Count();
+            //Aufgabe 14
+            List<string> listOfString = new List<string>();
+            listOfString.Add("m");
+            listOfString.Add("n");
+            listOfString.Add("o");
+            listOfString.Add("p");
+            listOfString.Add("q");
+            //Durch diesen Befehl Eintrag mit o rausgesucht
+            var find = listOfString.FirstOrDefault(x => x =="o");
+            listOfString.Remove(find);
+            //Andere Variante für Befehl in Zeile 157
+            listOfString.RemoveAll(e => e == "o");
+            //Foreach Schleife um Liste auszugeben/ Alternative für Foreach-Schleife
+            listOfString.ForEach(e => Console.WriteLine(e));
+            //foreach (string str in listOfString)
+            //{
+            //    Console.WriteLine(str);
+            //}
+
             Console.ReadLine();
                             
         }
